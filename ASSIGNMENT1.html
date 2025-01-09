@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>CPC354</title>
+
+        <script type="text/javascript" src="Common/webgl-utils.js"></script>
+        <script type="text/javascript" src="Common/initShaders.js"></script>
+        <script type="text/javascript" src="Common/MV.js"></script>
+        <script type="text/javascript" src="ASSIGNMENT1.js"></script>
+        <link rel="stylesheet" type="text/css" href="ASSIGNMENT1.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Pirata+One&family=Sixtyfour+Convergence:SCAN,XELA,YELA@41,100,-93&family=Squada+One&display=swap" rel="stylesheet">        
+        <!-- Define the vertex shader -->
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            // Declare the global variable(s) for draw calls
+            uniform mat4 projectionMatrix;
+            uniform mat4 modelViewMatrix;
+            
+            // Declare the input variable(s) to receive per-vertex data from the application
+            attribute vec4 vPosition;
+            attribute vec4 vColor;
+            
+            // Declare the varying variable(s) to pass data to the fragment shader
+            varying vec4 fColor;
+    
+            void main()
+            {
+                gl_Position = projectionMatrix * modelViewMatrix * vPosition;
+                fColor = vColor;
+            }
+        </script>
+    
+        <!-- Define the fragment shader -->
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            precision mediump float;
+            varying vec4 fColor;
+    
+            void main()
+            {
+                gl_FragColor = fColor;
+            }
+        </script>
+    </head>
+    
+    <body>
+      <div class="header-container">
+        <h1>TV IDENT</h1>
+\      </div>
+      <audio id="background-music" src="Common/sound/jessi.mp3" loop></audio>
+
+      <div class="main-container">
+        <!-- Canvas Container -->
+        <div class="canvas">
+          <canvas id="gl-canvas" width="800" height="800">
+            Error: Your browser doesn’t support the HTML5 canvas element.
+          </canvas>
+        </div>
+        <div id="dialog-box" class="show">
+          <h3>Animation Settings</h3>
+    
+          <div class="slider">
+            <label for="subdiv-slider">Subdivisions</label>
+            <br>
+            <div class="slider-labels">
+              <img src="Common/images/one.png" alt="One" class="icon">
+              <input class="slide" id="subdiv-slider" type="range" min="1" max="5" value="1">
+              <img src="Common/images/fivee.png" alt="Five" class="icon">
+            </div>
+          </div>
+          <span id="subdiv-text">1</span>
+    
+          <div class="slider">
+            <label for="iter-slider">No. of Iteration</label>
+            <br>
+            <div class="slider-labels">
+              <img src="Common/images/one.png" alt="One" class="icon">
+              <input class="slide" id="iter-slider" type="range" min="1" max="5" value="1">
+              <img src="Common/images/fivee.png" alt="Five" class="icon">
+            </div>
+          </div>
+          <span id="iter-text">1</span>
+    
+          <div class="slider">
+            <label for="speed-slider">Speed</label>
+            <br>
+            <div class="slider-labels">
+              <img src="Common/images/snail.png" alt="Snail" class="icon">
+              <input class="slide" id="speed-slider" type="range" min="1" max="10" value="1">
+              <img src="Common/images/rabbit.png" alt="Cheetah" class="icon">
+            </div>
+          </div>
+          <span id="speed-text">1</span>
+    
+          <div class="dropdown-container">
+            <label for="size-menu">Initial Size:</label><br>
+            <select id="size-menu">
+              <option value="1">Small</option>
+              <option value="2" selected>Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+    
+          <div class="color-picker-container">
+            <h2>Choose Triangle Colors</h2>
+            <div class="color-picker-row">
+              <div class="color-picker-item">
+                <input type="color" id="color-picker" value="#FF3366">
+                <div class="color-number">1</div>
+              </div>
+              <div class="color-picker-item">
+                <input type="color" id="color-picker1" value="#00E5FF">
+                <div class="color-number">2</div>
+              </div>
+              <div class="color-picker-item">
+                <input type="color" id="color-picker2" value="#333380">
+                <div class="color-number">3</div>
+              </div>
+              <div class="color-picker-item">
+                <input type="color" id="color-picker3" value="#000000">
+                <div class="color-number">4</div>
+              </div>
+            </div>
+          </div>
+    
+          <button class="btn-1" id="start-btn">
+            <div class="original">Start</div>
+            <div class="letters">
+              <span>S</span>
+              <span>T</span>
+              <span>A</span>
+              <span>R</span>
+              <span>T</span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <script src="script.js">
+        
+
+     
+      </script>
+    </body>
+    
+    
+    
+    </html>

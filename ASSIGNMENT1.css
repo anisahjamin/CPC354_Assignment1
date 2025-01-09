@@ -1,0 +1,526 @@
+/* Body styling */
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://e0.pxfuel.com/wallpapers/778/1022/desktop-wallpaper-pastel-background-goo-pastel-background-textures-and-aesthetic-2048-pixels-wide-1152-pixels-tall-tip-1920-x-1080-pastel.jpg'); /* Use the direct URL */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header styling */
+.header-container h1 {
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: bold;
+    font-variation-settings:
+      "BLED" 38,
+      "SCAN" 14,
+      "XELA" -100,
+      "YELA" 100;
+    font-size: 7em;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Main container holding both canvas and dialog box */
+.main-container {
+    display: flex;
+    width: 950vw;
+    height: 1000vh;
+    max-width: 1200px;
+    border-radius: 10px;
+    border-color: #5c4248;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Canvas styling */
+.canvas {
+    flex: 3; /* Takes up 2/3 of the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+	border: 10px solid #440c36;
+	border-radius: 10px;
+}
+
+/* Style for the dialog box */
+#dialog-box {
+    flex: 1; /* Takes up 1/3 of the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: url(https://i.pinimg.com/736x/06/9d/29/069d29a8401039c95bc52dea88049405.jpg);
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Dialog box header */
+#dialog-box h3 {
+    font-family: "Lobster Two", sans-serif;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.slider {
+  font-family:  "Lobster Two", sans-serif;
+  font-size: 1.3em;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}
+.slider 
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 200px;
+  background-color: transparent;
+
+  &:focus {
+    outline-color: #f8b195;
+  }
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  background: rgb(246, 114, 128);
+  background: -webkit-linear-gradient(
+    left,
+    rgba(246, 114, 128, 1) 0%,
+    rgba(192, 108, 132, 1) 50%,
+    rgba(53, 92, 125, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(246, 114, 128, 1) 0%,
+    rgba(192, 108, 132, 1) 50%,
+    rgba(53, 92, 125, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    startColorstr="#f67280",
+    endColorstr="#355c7d",
+    GradientType=1
+  );
+}
+
+input[type="range"]::-moz-range-track {
+  -moz-appearance: none;
+  appearance: none;
+  height: 3px;
+  background: rgb(246, 114, 128);
+  background: -moz-linear-gradient(
+    left,
+    rgba(246, 114, 128, 1) 0%,
+    rgba(192, 108, 132, 1) 50%,
+    rgba(53, 92, 125, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(246, 114, 128, 1) 0%,
+    rgba(192, 108, 132, 1) 50%,
+    rgba(53, 92, 125, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    startColorstr="#f67280",
+    endColorstr="#355c7d",
+    GradientType=1
+  );
+}
+
+input[type="range"]::-ms-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 3px;
+  background: rgb(246, 114, 128);
+  background: -moz-linear-gradient(
+    left,
+    rgba(246, 114, 128, 1) 0%,
+    rgba(192, 108, 132, 1) 50%,
+    rgba(53, 92, 125, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(246, 114, 128, 1) 0%,
+    rgba(192, 108, 132, 1) 50%,
+    rgba(53, 92, 125, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(246, 114, 128, 1) 0%,
+    rgba(192, 108, 132, 1) 50%,
+    rgba(53, 92, 125, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    startColorstr="#f67280",
+    endColorstr="#355c7d",
+    GradientType=1
+  );
+}
+
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+border: 2px solid #f8b195;
+border-radius: 50%;
+height: 20px;
+width: 20px;
+position: relative;
+bottom: 8px;
+background: #222
+  url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png")
+  center no-repeat;
+background-size: 50%;
+box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+cursor: grab;
+  
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+
+input[type="range"]::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #f8b195;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  bottom: 8px;
+  background: #222
+    url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png")
+    center no-repeat;
+  background-size: 50%;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+  cursor: grab;
+  
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #f8b195;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  bottom: 8px;
+  background: #222
+    url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png")
+    center no-repeat;
+  background-size: 50%;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+  cursor: grab;
+  
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: auto;
+}
+
+.dropdown-container {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.dropdown-container label {
+  font-family: "lobster two", sans-serif;
+  font-size: 1.3em;
+  color: #333;
+}
+
+.dropdown-container select {
+  width: 150px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-family: 'lobster two', sans-serif;
+  color: #555;
+  background-color: #f0f0f0; /* pastel blue */
+  border: 2px solid #a7eaff; /* pastel green */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown-container select:hover {
+  background-color: #f7bcf2; /* pastel green */
+  border-color: #c3ddf4; /* pastel blue */
+}
+
+.dropdown-container select:focus {
+  background-color: #bedff1; /* pastel peach */
+  border-color: #f4cccc; /* pastel pink */
+}
+
+/* Form styles */
+.form-group {
+    width: 100%;
+    padding-left: 1px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: "lobster two", sans-serif;
+    color: #555;
+    margin-bottom: 5px;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.color-picker-container {
+  font-family: "lobster two", sans-serif;
+  text-align: center;
+  padding-bottom: 50px;
+  width: 250px;
+}
+
+h2 {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.color-picker-row {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+  gap: 20px;
+}
+
+.color-picker-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#color-picker, #color-picker1, #color-picker2, #color-picker3 {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px;
+  border: 2px solid #34a0a4; /* Stylish border */
+  border-radius: 50%; /* Ensures circular shape */
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+  overflow: hidden; /* Ensures no square corners inside the circle */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  cursor: pointer;
+  padding: 0; /* Removes padding to avoid inner square */
+}
+
+input[type="color"] {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border-radius: 50%; /* Ensures the color picker inside matches the circle */
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%; /* Ensures the swatch itself is circular */
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 50%;
+}
+
+#color-picker:hover, #color-picker1:hover,
+#color-picker2:hover, #color-picker3:hover {
+  transform: scale(1.1); /* Hover effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3), 0 3px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.color-number {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Style for color picker and slider */
+.form-group input[type="color"] {
+    height: 40px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.form-group input[type="range"] {
+    
+    width: 50%;
+    height: 6px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Button styling */
+.form-group button {
+    background-color: #5c4248;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #4b363a;
+}
+
+/* #shadow-toggle {
+    margin-right: 10px;
+} */
+
+button {
+    font-family: inherit;
+  }
+
+.btn-1,
+.btn-1 *,
+.btn-1 :after,
+.btn-1 :before,
+.btn-1:after,
+.btn-1:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-1 {
+  scale: 1.0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #7baad1;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.btn-1:disabled {
+  cursor: default;
+}
+
+.btn-1:-moz-focusring {
+  outline: auto;
+}
+
+.btn-1 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-1 [hidden] {
+  display: none;
+}
+
+.btn-1 {
+  border: 1px solid;
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 1.2rem 5rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.btn-1 .original {
+  background: #fff;
+  color: #3183c5bd;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  transition: transform 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-1:hover .original {
+  transform: translateY(100%);
+}
+
+.btn-1 .letters {
+  display: inline-flex;
+}
+
+.btn-1 span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0.3s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.3s;
+}
+
+.btn-1 span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.btn-1:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-1:hover span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.btn-1:hover span:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.btn-1:hover span:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.btn-1:hover span:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.btn-1:hover span:nth-child(6) {
+  transition-delay: 0.5s;
+}
